@@ -1,6 +1,7 @@
 # React
 A bunch of stuff I've learnt about the library and its core features and functionality.
 
+Core
 - Components
   - Class
   - Function
@@ -10,5 +11,8 @@ A bunch of stuff I've learnt about the library and its core features and functio
 - State
 - JSX
 - Hooks
+
+
+- Routing
 - Forms
 - Styling
