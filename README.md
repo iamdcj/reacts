@@ -1,2 +1,4 @@
-# Hooks
-Hooks provide an alternative API for managing state in React components.
+# React
+A bunch of stuff I've learnt about the library and its core features and functionality.
+
+
