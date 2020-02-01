@@ -2,7 +2,7 @@
 
 React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/paradigms/README.md#declarative-programming), [component-based](components) [JavaScript](https://github.com/iamdcj/javascripts/) library used for building User Interfaces of all sizes and complexities. 
 
-**This repository is a collection of things I've found useful when learning the language. I would advise anyone looking at this repository to head over to the actual React website/repository**
+**This repository is a collection of things I've found useful when learning the language**
 
 ---
 
