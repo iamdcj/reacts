@@ -1,5 +1,8 @@
 # React
-A bunch of stuff I've learnt about the library and its core features and functionality.
+
+React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/paradigms/README.md#declarative-programming) JavaScript library built for building User Interfaces.
+
+The library is focused on using components to build layouts of all complexeties. 
 
 Core
 - Components
