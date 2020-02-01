@@ -18,3 +18,4 @@ React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/parad
 - Routing
 - Forms
 - Styling
+- Testing
