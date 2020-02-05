@@ -1,8 +1,9 @@
 # React
 
-React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/paradigms/README.md#declarative-programming), [component-based](components) [JavaScript](https://github.com/iamdcj/javascripts/) library used for building User Interfaces of all sizes and complexities. 
+React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/paradigms/README.md#declarative-programming), [component-based](components) [JavaScript](https://github.com/iamdcj/javascripts/) library used for building User Interfaces of all sizes and complexities.
 
 **Core**
+
 - React DOM
 - Components
   - Class
@@ -12,9 +13,10 @@ React is a [declarative](https://github.com/iamdcj/javascripts/blob/master/parad
 - Props
 - State
 - JSX
-- Hooks
+- [Hooks](hooks)
 
 **Other**
+
 - Routing
 - Forms
 - Styling
