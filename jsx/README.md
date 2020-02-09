@@ -15,3 +15,9 @@ The idea of separating all concerns into different files goes against React's id
 #### Styles
 
 JSX can easily contain any styles needed for the component's presentation directly in the file, resulting in all component concerns living in one file, however the styles are usually placed in a separate file.
+
+---
+
+#### Refs. and Resources
+
+- [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
