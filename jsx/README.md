@@ -1,10 +1,8 @@
 # JSX
 
-JSX is an extension of regular JavaScript, which allows engineers to code UI components, but with the added benefit of possessing the full power of JS.
+JSX is the language engineers use to build components in React. It extends regular JavaScript, allowing engineers to code UI components the full power of JS.
 
 > It is used to describe what the UI should look like.
-
----
 
 ### Separation of Concerns
 
