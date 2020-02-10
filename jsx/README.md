@@ -6,9 +6,9 @@ JSX is the language engineers use to build components in React. It extends regul
 
 ### Separation of Concerns
 
-The idea of separating all concerns into different files goes against React's ideology, instead it embraces separating concerns into components, which each component handling the structure and functionality in one component, resulting in;
+The classic idea of separating all concerns into different files goes against React's ideology, opposed to separating markup, logic and styles into different files it embraces placing these concerns into components, with each component containing its structure(markup) and logic(JavaScript).
 
-**JSX components containing both the markup, and the logic for a particular abstraction**.
+> JSX components contain both the markup, and the logic for a particular abstraction
 
 #### Styles
 
