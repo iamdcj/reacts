@@ -6,7 +6,7 @@ React can be used to deal with only the **'view'** aspect of an application, or 
 
 ### The Benefits of React
 
-- **Scalable**; a great framework for building applications of all sizes. 
+- **Scalable**; a great framework for building applications of all sizes.
 - **Lightning Fast**; React's DOM abstraction, the [virtual DOM](react-dom), ensures UI updates occur in rapid time.
 - **Production Ready**; a dedicated team of engineers ensure the library is ever-evolving and well maintained.
 - **Resources Aplenty**; there is an abundance of training material available for engineers of all levels.
@@ -15,8 +15,8 @@ React can be used to deal with only the **'view'** aspect of an application, or 
 
 **Core**
 
-- React DOM
-- Data Flow
+- [Data Flow and Updates](data-flow)
+  - React DOM
 - [Components](components)
   - [JSX](jsx)
   - Class
