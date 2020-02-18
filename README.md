@@ -6,9 +6,10 @@ React can be used to deal with only the **'view'** aspect of an application, or 
 
 ### The Benefits of React
 
-React provides a scalable framework for building applications of all sizes. It ships with a DOM, the [virtual DOM](react-dom), which ensures UI updates are lightning fast.
-
-It is maintained by a dedicated team of developers at Facebook, with an abundance of training and learning resources to aid application development.
+- **Scalable**; a great framework for building applications of all sizes. 
+- **Lightning Fast**; React's DOM abstraction, the [virtual DOM](react-dom), ensures UI updates occur in rapid time.
+- **Production Ready**; a dedicated team of engineers ensure the library is ever-evolving and well maintained.
+- **Resources Aplenty**; there is an abundance of training material available for engineers of all levels.
 
 ---
 
