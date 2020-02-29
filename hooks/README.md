@@ -2,7 +2,7 @@
 
 Hooks provide stateful components, without needing to use `class`es.
 
-Prior to the advent of Hooks, `function`al components were used for presentation purposes, and `class`es were used to working with state. **Hooks add state to functional components.**
+Prior to the advent of Hooks, `function`al components were used for presentation purposes, and `class`es were used to working with state/logic. **Hooks add state to functional components.**
 
 ## Benefits
 
