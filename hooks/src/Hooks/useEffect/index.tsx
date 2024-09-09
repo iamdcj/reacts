@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Fetch from "./fetch";
 import SubNav from "../../components/SubNav";
 import { Box } from "@material-ui/core";
+import Cleanup from "./cleanup";
 
 export interface UseEffectProps {}
 
@@ -27,10 +28,13 @@ const useEffect: React.SFC<UseEffectProps> = () => {
       </Box>
       <SubNav
         title="useEffect Examples"
-        links={[{ path: "/use-effect/fetch", label: "Fetch" }]}
+        links={[{ path: "/use-effect/fetch", label: "Fetch" }, { path: "/use-effect/cleanup", label: "Cleanup" }]}
       />
-      <Route path="/use-effect">
+      <Route path="/use-effect/fetch">
         <Fetch />
+      </Route>
+      <Route path="/use-effect/cleanup">
+        <Cleanup />
       </Route>
     </div>
   );
