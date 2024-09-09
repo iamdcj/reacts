@@ -12,7 +12,6 @@ const App = () => {
     <Router>
       <main>
         <Header />
-
         <Box width="75%" justifyContent="start" py={10}>
           <Switch>
             <Route path="/use-state">

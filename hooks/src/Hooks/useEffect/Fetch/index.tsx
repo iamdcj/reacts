@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 
 export interface FetchProps {}
@@ -21,20 +22,23 @@ const Fetch: React.SFC<FetchProps> = () => {
 
   return (
     <section>
-      <header>
+      <Box component="header" mb={4}>
         <h1>Fetcher</h1>
         <p>The following effects are used in this example:</p>
-      </header>
-      <ul>
-        <li>
-          useEffect hook to handle an async call side-effect when component
-          mounts, or when page changes.
-        </li>
-        <li>
-          useState - this handles the state for the items return from the fetch,
-          and the paging.
-        </li>
-      </ul>
+      </Box>
+
+      <Box mb={6}>
+        <ul>
+          <li>
+            useEffect - to handle an async call side-effect when component
+            mounts, or when page changes.
+          </li>
+          <li>
+            useState - this handles the state for the items return from the
+            fetch, and the paging.
+          </li>
+        </ul>
+      </Box>
 
       <div>
         {state.items.map((i: any) => (

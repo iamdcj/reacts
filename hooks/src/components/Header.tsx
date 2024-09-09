@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Drawer, MenuItem, Button, Box } from "@material-ui/core";
+import {  Drawer, MenuItem, Button, Box } from "@material-ui/core";
 
 export interface HeaderProps {}
 
 const Header: React.SFC<HeaderProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const routes = [
+    { path: "/use-state", label: "useState" },
+    { path: "/use-effect", label: "useEffect" },
+    { path: "/use-ref", label: "useRef" },
+    { path: "/use-reducer", label: "useReducer" },
+  ];
 
   return (
     <Box
@@ -19,10 +25,13 @@ const Header: React.SFC<HeaderProps> = () => {
         gridGap: "20px",
         gridTemplateColumns: "min-content 1fr min-content",
         alignItems: "center",
-        width: '75%'
+        width: "75%",
+        lineHeight: 1,
       }}
     >
-      <h1 className="no-margin">Hooks</h1>
+      <Box fontSize={30} component="p" fontWeight={600} mb={0}>
+        Hooks
+      </Box>
       <p className="no-margin">
         A declarative way to manage state within function components.
       </p>
@@ -36,31 +45,20 @@ const Header: React.SFC<HeaderProps> = () => {
       </Button>
 
       <Drawer anchor="right" open={menuOpen}>
-        <Button onClick={() => setMenuOpen(false)} variant="contained">
-          Close
-        </Button>
-        <nav>
-          <MenuItem>
-            <Link to="/use-state" onClick={() => setMenuOpen(false)}>
-              Use State
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/use-effect" onClick={() => setMenuOpen(false)}>
-              Use Effect
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/use-ref" onClick={() => setMenuOpen(false)}>
-              Use Ref
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/use-reducer" onClick={() => setMenuOpen(false)}>
-              Use Reducer
-            </Link>
-          </MenuItem>
-        </nav>
+        <Box width={300}>
+          <Button onClick={() => setMenuOpen(false)} variant="contained">
+            Close
+          </Button>
+          <nav>
+            {routes.map(({ path, label }) => (
+              <MenuItem>
+                <Link to={path} onClick={() => setMenuOpen(false)}>
+                  {label}
+                </Link>
+              </MenuItem>
+            ))}
+          </nav>
+        </Box>
       </Drawer>
     </Box>
   );

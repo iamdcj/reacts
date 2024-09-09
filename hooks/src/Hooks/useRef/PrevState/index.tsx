@@ -25,7 +25,7 @@ const PrevState: React.SFC<DOMProps> = () => {
         </li>
       </ul>
       <p>
-        Current Count: {count} | Previous Count:{prevState.current}
+        Current Count:  <strong>{count}</strong> | Previous Count: <strong>{prevState.current}</strong>
       </p>
       <button onClick={() => setCount(count + 1)}>Increase count</button>
     </>

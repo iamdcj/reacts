@@ -19,15 +19,36 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin-bottom: 18px
+}
+
+h1 {
+  font-size: 36px;
 }
 
 .no-margin {
   margin: 0;
 }
 
+li {
+  margin-bottom: 12px;
+}
+
 main  {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+strong {
+  font-weight: 600;
 }

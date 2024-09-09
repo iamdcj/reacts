@@ -20,6 +20,13 @@ const DOM: React.SFC<DOMProps> = () => {
           when the ref captures the HTML element.
         </li>
       </ul>
+      <code>
+        ref type: {elRef.toString()}
+      </code>
+      <br/>
+      <code>
+        DOM Element: {elRef?.current?.toString()}
+      </code>
       <p ref={elRef}></p>
     </>
   );
