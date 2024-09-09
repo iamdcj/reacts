@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Drawer, MenuItem, Button } from "@material-ui/core";
+import { Container, Drawer, MenuItem, Button, Box } from "@material-ui/core";
 
 export interface HeaderProps {}
 
@@ -8,15 +8,18 @@ const Header: React.SFC<HeaderProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <Container
+    <Box
+      component="header"
       style={{
-        background: "#e13206",
+        borderRadius: "0 0 8px 8px",
+        background: "orangered",
         color: "#fff",
         padding: "10px 20px",
         display: "grid",
         gridGap: "20px",
         gridTemplateColumns: "min-content 1fr min-content",
-        alignItems: "baseline"
+        alignItems: "center",
+        width: '75%'
       }}
     >
       <h1 className="no-margin">Hooks</h1>
@@ -59,7 +62,7 @@ const Header: React.SFC<HeaderProps> = () => {
           </MenuItem>
         </nav>
       </Drawer>
-    </Container>
+    </Box>
   );
 };
 

@@ -6,19 +6,18 @@ const Fetch: React.SFC<FetchProps> = () => {
   const [state, setItems] = useState({ items: [] });
   const [page, setPage] = useState(1);
 
-  const fetchItems = (p: number) => {
-    fetch(`http://5e3f3b0364c3f6001455102a.mockapi.io/v0/comments${p}`)
-      .then(response => response.json())
-      .then(todos => {
-        setItems({ items: todos });
-      });
+  const fetchItems = async () => {
+    const endpoint = `http://5e3f3b0364c3f6001455102a.mockapi.io/v0/comments${page}`;
+
+    const res = await fetch(endpoint);
+    const data = await res.json();
+
+    setItems({ items: data });
   };
 
   useEffect(() => {
-    fetchItems(page);
-  }, [page]);
-
-  console.log(state);
+    void fetchItems();
+  }, [page]); // this will run on first load, and whenever the page changes
 
   return (
     <section>
@@ -39,7 +38,7 @@ const Fetch: React.SFC<FetchProps> = () => {
 
       <div>
         {state.items.map((i: any) => (
-          <li>{i.name}</li>
+          <li key={i.id}>{i.name}</li>
         ))}
         <button disabled={page === 1} onClick={() => setPage(1)}>
           1
