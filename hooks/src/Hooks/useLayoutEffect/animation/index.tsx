@@ -12,7 +12,8 @@ const Animation: React.SFC<CounterProps> = () => {
     const now = performance.now();
 
     while (performance.now() - now < 1000) {
-      // this will block the painting
+      // this will block the painting of the button
+      // this will block the button move
     }
 
     if (toggle) {
@@ -26,7 +27,7 @@ const Animation: React.SFC<CounterProps> = () => {
     const now = performance.now();
 
     while (performance.now() - now < 1000) {
-      // this will block the painting
+      // this will block the button move
     }
 
     if (toggleB) {
