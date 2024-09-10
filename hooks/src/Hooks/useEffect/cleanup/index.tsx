@@ -1,4 +1,3 @@
-import { log } from "console";
 import React, { useEffect, useState } from "react";
 
 export interface CounterProps {}
@@ -15,14 +14,17 @@ const Cleanup: React.SFC<CounterProps> = () => {
   };
 
   useEffect(() => {
-    const to = setTimeout(() => {
-      updateCount(count+1)
+    const to = setInterval(() => {
+      updateCount((count) => count + 1)
     }, 1000);
 
     return () => {
-      clearTimeout(to) // this clears the timeout on unmount
+      console.log('cleanup');
+      clearInterval(to) 
+      // this clears the interval on unmount
+      // this runs on ever render and when the component unmounts
     }
-  }, [count])
+  }, [])
 
   return (
     <div>
