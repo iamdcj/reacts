@@ -5,6 +5,7 @@ import UseRef from "./Hooks/useRef";
 import Header from "./components/Header";
 import { Box } from "@material-ui/core";
 import UseEffect from "./Hooks/useEffect";
+import UseLayoutEffect from "./Hooks/useLayoutEffect";
 // import UseReducer from "./Hooks/useReducer";
 
 const App = () => {
@@ -17,16 +18,15 @@ const App = () => {
             <Route path="/use-state">
               <UseState />
             </Route>
-
             <Route path="/use-ref">
               <UseRef />
             </Route>
-            
-          <Route path="/use-effect">
-            <UseEffect />
-          </Route>
-
-         
+            <Route path="/use-effect">
+              <UseEffect />
+            </Route>
+            <Route path="/use-layout-effect">
+              <UseLayoutEffect />
+            </Route>
           </Switch>
         </Box>
       </main>

@@ -11,6 +11,7 @@ const Header: React.SFC<HeaderProps> = () => {
     { path: "/use-effect", label: "useEffect" },
     { path: "/use-ref", label: "useRef" },
     { path: "/use-reducer", label: "useReducer" },
+    { path: "/use-layout-effect", label: "useLayoutEffect" },
   ];
 
   return (

@@ -12,11 +12,8 @@ const SubNav: React.SFC<SubNavProps> = ({ title = "", links }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: any, newValue: React.SetStateAction<number>) => {
-    debugger;
     setValue(newValue);
   };
-
-  console.log(value);
 
   return (
     <Box mb={5} p={1}>

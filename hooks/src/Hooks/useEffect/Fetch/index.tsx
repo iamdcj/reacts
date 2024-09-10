@@ -6,7 +6,7 @@ export interface FetchProps {}
 const Fetch: React.SFC<FetchProps> = () => {
   const [state, setItems] = useState({ items: [] });
   const [page, setPage] = useState(1);
-
+  
   const fetchItems = async () => {
     const endpoint = `http://5e3f3b0364c3f6001455102a.mockapi.io/v0/comments${page}`;
 
