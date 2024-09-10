@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useEffect, useState } from "react";
 
 export interface CounterProps {}
 
@@ -9,29 +9,37 @@ const Animation: React.SFC<CounterProps> = () => {
   const [toggleB, setToggleB] = useState(false);
 
   useLayoutEffect(() => {
+    if(!toggle) {
+      return
+    }
+
     const now = performance.now();
 
-    while (performance.now() - now < 1000) {
+    while (performance.now() - now < 5000) {
       // this will block the painting of the button
       // this will block the button move
     }
 
     if (toggle) {
-      setPosition(100);
+      setPosition(500);
     } else {
       setPosition(0);
     }
   }, [toggle]);
 
   useEffect(() => {
+    if(!toggleB) {
+      return
+    }
+
     const now = performance.now();
 
-    while (performance.now() - now < 1000) {
+    while (performance.now() - now < 2000) {
       // this will block the button move
     }
 
     if (toggleB) {
-      setPositionB(100);
+      setPositionB(500);
     } else {
       setPositionB(0);
     }
@@ -50,7 +58,7 @@ const Animation: React.SFC<CounterProps> = () => {
         >
           useLayoutEffect
         </div>
-        <p>Notice when the button text changes (paint occurs)</p>
+        <p>The button text change will </p>
         <button type="button" onClick={() => setToggle(!toggle)}>
           {toggle ? "END" : "START"}
         </button>
