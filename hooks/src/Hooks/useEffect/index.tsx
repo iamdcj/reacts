@@ -11,7 +11,7 @@ const useEffect= () => {
   return (
     <div>
       <Box mb={5}>
-        <h1>The Effect Hook</h1>
+        <h1>The useEffect Hook</h1>
         <p>
           The useEffect hook allows you to track depedencies with your
           component, and perform some action based on said changes (side effects)

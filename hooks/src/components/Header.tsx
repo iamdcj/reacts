@@ -51,7 +51,7 @@ const Header = () => {
         >
           {routes.map(({ path, label }) => (
             <MenuItem key={path}>
-              <Link to={path}>
+              <Link to={path}  style={{ color: 'slate'}}>
                 {label}
               </Link>
             </MenuItem>

@@ -22,7 +22,7 @@ const App = () => {
     <Router>
       <main>
         <Header />
-        <Box width="75%" justifyContent="start" py={10}>
+        <Box width="75%" justifyContent="start" px={2} py={8}>
           <Switch>
             {routes.map((route, i) => (
               <Route key={i} {...route} />
