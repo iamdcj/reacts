@@ -5,7 +5,6 @@ import React, { useState } from "react";
 export interface CounterProps {}
 
 const Counter = () => {
-  console.log("render");
   let [count, updateCount] = useState(1);
 
   const policeCount = (count: number) => {
