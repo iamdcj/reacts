@@ -50,7 +50,7 @@ const Header = () => {
           }}
         >
           {routes.map(({ path, label }) => (
-            <MenuItem>
+            <MenuItem key={path}>
               <Link to={path} onClick={() => setMenuOpen(false)}>
                 {label}
               </Link>

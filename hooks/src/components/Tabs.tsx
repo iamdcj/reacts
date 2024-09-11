@@ -17,11 +17,11 @@ const Tabs = ({ links }: { links: any[] }) => {
       <TabContext value={value}>
         <TabList onChange={handleChange}>
           {links.map(({ label }, i) => (
-            <Tab value={String(i)} label={label} />
+            <Tab key={label} value={String(i)} label={label} />
           ))}
         </TabList>
-        {links.map(({ component: Component }, i) => (
-          <TabPanel value={String(i)}>
+        {links.map(({ label, component: Component }, i) => (
+          <TabPanel key={`${label}-panel`} value={String(i)}>
             <Component />
           </TabPanel>
         ))}

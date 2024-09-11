@@ -12,35 +12,16 @@ const useLayoutEffect = () => {
       <Box mb={5}>
         <h1>The useLayoutEffect Hook</h1>
         <p>
-          The useLayoutEffect hook allows you to perform a specific task before
-          the browser's next - it is a blocking/synchhronous call.
+          The useLayoutEffect hook provides a way to perform certain tasks before the next browser paint occurs - this is achived by blocking the next render/paint.
         </p>
         <p>
-          The hook will run on every render, unless explicitly to configured to
-          run based on certain depedencies, or one time by passing an empty
-          dependency array.
-          <a href="https://refine.dev/blog/uselayouteffect-vs-useeffect/#comparing-useeffect-to-uselayouteffect">
-            resource
-          </a>
-        </p>
-        <p>
-          If you are setting state within a useLayoutEffect you must monitor
-          dependencies to avoid triggering an infinite render loop
-        </p>
-        <p>
-          Trigegers re-render? No, but can often contain a call to set the
-          component state..
-        </p>
-
-        <p>
-          Common use cases include: fetching data from a remote source on mount,
-          setting some initial state, reacting to a specific state change
+          This hook should be used sparingly, say for measuring DOM elements, or certain kinds of animation.
         </p>
       </Box>
       <Tabs
         links={[
-          { label: "Scroll", component: ScrollTo },
           { label: "Animation", component: Animation },
+          { label: "Scroll", component: ScrollTo },
         ]}
       />
     </div>
