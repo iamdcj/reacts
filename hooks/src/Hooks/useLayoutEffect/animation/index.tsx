@@ -1,3 +1,4 @@
+import { Box, Button } from "@material-ui/core";
 import React, { useLayoutEffect, useEffect, useState } from "react";
 
 export interface CounterProps {}
@@ -9,10 +10,6 @@ const Animation: React.SFC<CounterProps> = () => {
   const [toggleB, setToggleB] = useState(false);
 
   useLayoutEffect(() => {
-    if(!toggle) {
-      return
-    }
-
     const now = performance.now();
 
     while (performance.now() - now < 5000) {
@@ -28,10 +25,6 @@ const Animation: React.SFC<CounterProps> = () => {
   }, [toggle]);
 
   useEffect(() => {
-    if(!toggleB) {
-      return
-    }
-
     const now = performance.now();
 
     while (performance.now() - now < 2000) {
@@ -47,40 +40,53 @@ const Animation: React.SFC<CounterProps> = () => {
 
   return (
     <>
-      <div style={{ height: 150, background: "beige", marginBottom: 20 }}>
-        <div
-          style={{
-            transform: `translateX(${position}%)`,
-            background: "orange",
-            height: 50,
-            width: 150,
-          }}
-        >
-          useLayoutEffect
-        </div>
-        <p>The button text change will </p>
-        <button type="button" onClick={() => setToggle(!toggle)}>
+      <Box
+        style={{ height: 150, background: "beige", marginBottom: 20 }}
+        padding={3}
+      >
+        <Tile position={position} title="useLayoutEffect" />
+        <p>
+          The button text change will after you see the animation end - the
+          blocking nature of useLayoutEffect prevents the paint from occuring
+          till after the callback executes.
+        </p>
+        <Button type="button" variant="outlined" onClick={() => setToggle(!toggle)}>
           {toggle ? "END" : "START"}
-        </button>
-      </div>
+        </Button>
+      </Box>
 
-      <div style={{ height: 150, background: "beige" }}>
-        <div
-          style={{
-            transform: `translateX(${positionB}%)`,
-            background: "lightblue",
-            height: 50,
-            width: 150,
-          }}
-        >
-          useEffect
-        </div>
-        <p>Notice when the button text changes (paint occurs)</p>
-        <button type="button" onClick={() => setToggleB(!toggleB)}>
+      <Box style={{ height: 150, background: "beige" }} padding={3}>
+        <Tile position={positionB} title="useEffect" />
+        <p>
+          Notice when the button text changes (paint occurs) before the
+          animation fires - useEffect will not stand in the way of the painting,
+          instead it will run after the rendering is complete.
+        </p>
+        <Button type="button" variant="outlined" onClick={() => setToggleB(!toggleB)}>
           {toggleB ? "END" : "START"}
-        </button>
-      </div>
+        </Button>
+      </Box>
     </>
+  );
+};
+
+const Tile = ({ position, title }: { position: number; title: string }) => {
+  return (
+    <Box
+      style={{
+        transform: `translateX(${position}%)`,
+        background: "lightblue",
+        height: 50,
+        width: 150,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      
+      }}
+      mb={2}
+    >
+      {title}
+    </Box>
   );
 };
 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export interface CounterProps {}
 
 const Counter: React.SFC<CounterProps> = () => {
+  console.log('render');
   let [count, updateCount] = useState(0);
 
   const policeCount = (count: number) => {

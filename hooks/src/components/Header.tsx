@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {  Drawer, MenuItem, Button, Box } from "@material-ui/core";
+import { Drawer, MenuItem, Button, Box } from "@material-ui/core";
 
 export interface HeaderProps {}
 
@@ -18,49 +18,46 @@ const Header: React.SFC<HeaderProps> = () => {
     <Box
       component="header"
       style={{
-        borderRadius: "0 0 8px 8px",
-        background: "orangered",
-        color: "#fff",
-        padding: "10px 20px",
-        display: "grid",
-        gridGap: "20px",
-        gridTemplateColumns: "min-content 1fr min-content",
-        alignItems: "center",
         width: "75%",
-        lineHeight: 1,
       }}
     >
-      <Box fontSize={30} component="p" fontWeight={600} mb={0}>
-        Hooks
-      </Box>
-      <p className="no-margin">
-        A declarative way to manage state within function components.
-      </p>
-
-      <Button
-        onClick={() => setMenuOpen(!menuOpen)}
-        variant="contained"
-        style={{ alignSelf: "center" }}
+      <Box
+        mb={1}
+        style={{
+          borderRadius: "0 0 8px 8px",
+          background: "orangered",
+          color: "#fff",
+          padding: "10px 20px",
+          display: "grid",
+          gridGap: "20px",
+          gridTemplateColumns: "min-content 1fr min-content",
+          alignItems: "center",
+          lineHeight: 1,
+        }}
       >
-        Menu
-      </Button>
-
-      <Drawer anchor="right" open={menuOpen}>
-        <Box width={300}>
-          <Button onClick={() => setMenuOpen(false)} variant="contained">
-            Close
-          </Button>
-          <nav>
-            {routes.map(({ path, label }) => (
-              <MenuItem>
-                <Link to={path} onClick={() => setMenuOpen(false)}>
-                  {label}
-                </Link>
-              </MenuItem>
-            ))}
-          </nav>
+        <Box fontSize={30} component="p" fontWeight={600} mb={0}>
+          Hooks
         </Box>
-      </Drawer>
+        <p className="no-margin">
+          A declarative way to manage state within function components.
+        </p>
+      </Box>
+      <Box>
+        <nav
+          style={{
+            display: "flex",
+            gap: "10px",
+          }}
+        >
+          {routes.map(({ path, label }) => (
+            <MenuItem>
+              <Link to={path} onClick={() => setMenuOpen(false)}>
+                {label}
+              </Link>
+            </MenuItem>
+          ))}
+        </nav>
+      </Box>
     </Box>
   );
 };
