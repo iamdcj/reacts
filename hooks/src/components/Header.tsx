@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Drawer, MenuItem, Button, Box } from "@material-ui/core";
+import { Drawer, MenuItem, Button, Box } from "@mui/material";
 
 export interface HeaderProps {}
 
-const Header: React.SFC<HeaderProps> = () => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const routes = [
     { path: "/use-state", label: "useState" },

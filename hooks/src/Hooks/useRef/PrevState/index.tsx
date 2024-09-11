@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 export interface DOMProps {}
 
-const PrevState: React.SFC<DOMProps> = () => {
+const PrevState = () => {
   const prevState = useRef() as React.MutableRefObject<number>;
   const [count, setCount] = useState(0);
 

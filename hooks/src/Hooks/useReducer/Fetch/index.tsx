@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from "react";
 
 export interface BasicToggleProps {}
 
-const ReducerFetch: React.SFC<BasicToggleProps> = () => {
+const ReducerFetch = () => {
   const [state, setState] = useReducer(
     (state: any, newState: any) => ({ ...state, ...newState }),
     { loading: false, results: null, error: false }

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 export interface DOMProps {}
 
-const DOM: React.SFC<DOMProps> = () => {
+const DOM = () => {
   const elRef = useRef() as React.MutableRefObject<HTMLParagraphElement>;
 
   useEffect(() => {

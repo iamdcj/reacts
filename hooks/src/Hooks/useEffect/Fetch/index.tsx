@@ -1,9 +1,9 @@
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import React, { useState, useEffect } from "react";
 
 export interface FetchProps {}
 
-const Fetch: React.SFC<FetchProps> = () => {
+const Fetch = () => {
   const [state, setItems] = useState({ items: [] });
   const [page, setPage] = useState(1);
   

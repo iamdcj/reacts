@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export interface CounterProps {}
 
-const Counter: React.SFC<CounterProps> = () => {
+const Counter = () => {
   console.log('render');
   let [count, updateCount] = useState(0);
 

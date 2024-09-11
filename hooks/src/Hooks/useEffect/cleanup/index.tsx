@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export interface CounterProps {}
 
-const Cleanup: React.SFC<CounterProps> = () => {
+const Cleanup = () => {
   let [count, updateCount] = useState(0);
 
   const policeCount = (count: number) => {

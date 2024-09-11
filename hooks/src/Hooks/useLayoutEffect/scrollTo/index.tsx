@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useEffect, useRef } from "react";
 
 export interface CounterProps {}
 
-const ScrollTo: React.SFC<CounterProps> = () => {
+const ScrollTo = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const innerRef = useRef<HTMLDivElement | null>(null);
 

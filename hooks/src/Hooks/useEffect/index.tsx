@@ -1,13 +1,13 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Fetch from "./fetch";
-import SubNav from "../../components/SubNav";
-import { Box } from "@material-ui/core";
+
+import { Box } from "@mui/material";
 import Cleanup from "./cleanup";
 
 export interface UseEffectProps {}
 
-const useEffect: React.SFC<UseEffectProps> = () => {
+const useEffect= () => {
   return (
     <div>
       <Box mb={5}>
@@ -28,16 +28,6 @@ const useEffect: React.SFC<UseEffectProps> = () => {
 
         <p>Common use cases include: fetching data from a remote source on mount, setting some initial state, reacting to a specific state change</p>
       </Box>
-      <SubNav
-        title="useEffect Examples"
-        links={[{ path: "/use-effect/fetch", label: "Fetch" }, { path: "/use-effect/cleanup", label: "Cleanup" }]}
-      />
-      <Route path="/use-effect/fetch">
-        <Fetch />
-      </Route>
-      <Route path="/use-effect/cleanup">
-        <Cleanup />
-      </Route>
     </div>
   );
 };

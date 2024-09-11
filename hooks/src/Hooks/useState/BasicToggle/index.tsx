@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export interface BasicToggleProps {}
 
-const BasicToggle: React.SFC<BasicToggleProps> = () => {
+const BasicToggle = () => {
   const [isVisible, setVisibility] = useState(true);
 
   return (

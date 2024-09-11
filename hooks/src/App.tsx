@@ -3,17 +3,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import UseState from "./Hooks/useState";
 import UseRef from "./Hooks/useRef";
 import Header from "./components/Header";
-import { Box } from "@material-ui/core";
 import UseEffect from "./Hooks/useEffect";
 import UseLayoutEffect from "./Hooks/useLayoutEffect";
-import { log } from "console";
+import { Box } from "@mui/material";
 // import UseReducer from "./Hooks/useReducer";
 
 const App = () => {
-  console.log('render');
-  
   return (
-    <StrictMode>
       <Router>
         <main>
           <Header />
@@ -35,7 +31,6 @@ const App = () => {
           </Box>
         </main>
       </Router>
-    </StrictMode>
   );
 };
 
