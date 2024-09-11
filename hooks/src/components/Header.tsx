@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Drawer, MenuItem, Button, Box } from "@mui/material";
+import { MenuItem, Box } from "@mui/material";
 
 export interface HeaderProps {}
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const routes = [
     { path: "/use-state", label: "useState" },
     { path: "/use-effect", label: "useEffect" },
     { path: "/use-ref", label: "useRef" },
     { path: "/use-reducer", label: "useReducer" },
     { path: "/use-layout-effect", label: "useLayoutEffect" },
+    { path: "/use-callback", label: "useCallback" },
   ];
 
   return (
@@ -51,7 +51,7 @@ const Header = () => {
         >
           {routes.map(({ path, label }) => (
             <MenuItem key={path}>
-              <Link to={path} onClick={() => setMenuOpen(false)}>
+              <Link to={path}>
                 {label}
               </Link>
             </MenuItem>

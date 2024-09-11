@@ -50,6 +50,7 @@ const FunctionAsProp = () => {
 
 const ChildComponent = memo(({ callback }: { callback: () => void }) => {
     // without the memo wrapper the useCallback addition will not be useful
+    // and without the useCallback the component fill not memoize
   console.log("--------------");
   console.log("CHILD RENDER");
   callback();

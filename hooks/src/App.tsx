@@ -1,40 +1,36 @@
-import React, { StrictMode } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Box } from "@mui/material";
 import UseState from "./Hooks/useState";
 import UseRef from "./Hooks/useRef";
 import Header from "./components/Header";
 import UseEffect from "./Hooks/useEffect";
 import UseLayoutEffect from "./Hooks/useLayoutEffect";
-import { Box } from "@mui/material";
 import UseCallbackHook from "./Hooks/useCallback";
 // import UseReducer from "./Hooks/useReducer";
 
+const routes = [
+  { path: "/use-state", component: UseState},
+  { path: "/use-ref", component: UseRef},
+  { path: "/use-effect", component: UseEffect},
+  { path: "/use-layout-effect", component: UseLayoutEffect},
+  { path: "/use-callback", component: UseCallbackHook},
+];
+
 const App = () => {
   return (
-      <Router>
-        <main>
-          <Header />
-          <Box width="75%" justifyContent="start" py={10}>
-            <Switch>
-              <Route path="/use-state">
-                <UseState />
-              </Route>
-              <Route path="/use-ref">
-                <UseRef />
-              </Route>
-              <Route path="/use-effect">
-                <UseEffect />
-              </Route>
-              <Route path="/use-layout-effect">
-                <UseLayoutEffect />
-              </Route>
-              <Route path="/use-callback">
-                <UseCallbackHook />
-              </Route>
-            </Switch>
-          </Box>
-        </main>
-      </Router>
+    <Router>
+      <main>
+        <Header />
+        <Box width="75%" justifyContent="start" py={10}>
+          <Switch>
+            {routes.map((route, i) => (
+              <Route key={i} {...route} />
+            ))}
+          </Switch>
+        </Box>
+      </main>
+    </Router>
   );
 };
 
