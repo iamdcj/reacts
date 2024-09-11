@@ -9,19 +9,16 @@ const Tabs = ({ links }: { links: any[] }) => {
     setValue(String(newValue));
   };
 
-  console.log('render');
-  
-
   return (
     <Box mb={5} p={1}>
       <TabContext value={value}>
-        <TabList onChange={handleChange}>
+        <TabList onChange={handleChange} sx={{ mb: 3}}>
           {links.map(({ label }, i) => (
             <Tab key={label} value={String(i)} label={label} />
           ))}
         </TabList>
         {links.map(({ label, component: Component }, i) => (
-          <TabPanel key={`${label}-panel`} value={String(i)}>
+          <TabPanel key={`${label}-panel`} value={String(i)} sx={{ background: '#faf8f4'}}>
             <Component />
           </TabPanel>
         ))}

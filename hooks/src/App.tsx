@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import UseEffect from "./Hooks/useEffect";
 import UseLayoutEffect from "./Hooks/useLayoutEffect";
 import { Box } from "@mui/material";
+import UseCallbackHook from "./Hooks/useCallback";
 // import UseReducer from "./Hooks/useReducer";
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
               </Route>
               <Route path="/use-layout-effect">
                 <UseLayoutEffect />
+              </Route>
+              <Route path="/use-callback">
+                <UseCallbackHook />
               </Route>
             </Switch>
           </Box>

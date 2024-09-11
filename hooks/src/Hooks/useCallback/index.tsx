@@ -1,16 +1,22 @@
 import React from "react";
-
+import FunctionAsProp from "./FunctionAsProp";
+import Tabs from "../../components/Tabs";
 
 export interface UseStateProps {}
 
-const UseEffectHook = () => {
+const UseCallbackHook = () => {
   return (
     <div>
-      <h1>The State Hook</h1>
-      <p>The useState hook allows you to add state to your individual components</p>
-      <p>Triggers re-render? Yes, when values changes.</p>
+      <h1>The UseCallback Hook</h1>
+      <p>
+        The useCallback hook is an optimization hook that can be used to ensure a memoized version of a function is created, thus allowing for referential equality.
+      </p>
+      <p>This is especially useful if you pass a function as a proper to a child, or if a function is a dependency of a useEffect hook</p>
+      <Tabs
+        links={[{ label: "Function as Prop", component: FunctionAsProp }]}
+      />
     </div>
   );
 };
 
-export default UseEffectHook;
+export default UseCallbackHook;
